@@ -12,7 +12,6 @@
 //  It does not know who!
 //  Rock beats scissors, scissors beats paper, and paper beats rock.
 //
-
 import SwiftUI
 
 // The picture for each move. These are emoji, so they are just text.
@@ -43,6 +42,9 @@ struct RockPaperScissorsView: View {
     // How many rounds have been played.
     @State var roundsPlayed: Int = 0
 
+    // Who/How many wins
+    @State var playerWins: Int = 0
+    @State var computerWins: Int = 0
     // MARK: - Computed properties
 
     var body: some View {
@@ -203,14 +205,18 @@ struct RockPaperScissorsView: View {
         }else if playerMove == "Scissors" && computerMove == "Paper" {
             
             result = "You won"
+            playerWins += 1
         } else if playerMove == "Rock" && computerMove == "Scissors" {
             
             result = "You won"
+            playerWins += 1
         } else if playerMove == "Paper" && computerMove == "Rock" {
             
             result = "You won"
+            playerWins += 1
         } else {
             result = "You lose"
+            computerWins += 1
         }
     }
 }
