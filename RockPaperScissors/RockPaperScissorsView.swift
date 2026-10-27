@@ -7,9 +7,6 @@
 //  The app shows both moves and counts how many rounds you have played.
 //  It can tell when a round is a tie.
 //
-//  WHAT IT DOES NOT DO YET
-//  When the two moves are different, it only says "Someone won".
-//  It does not know who!
 //  Rock beats scissors, scissors beats paper, and paper beats rock.
 //
 import SwiftUI
@@ -70,6 +67,8 @@ struct RockPaperScissorsView: View {
                         .font(.system(size: 90))
                     Text(playerMove)
                         .font(.title3)
+                    Text("Player wins: \(playerWins)")
+                        .font(.system(size: 10))
                 }
                 .frame(maxWidth: .infinity)
 
@@ -84,6 +83,8 @@ struct RockPaperScissorsView: View {
                         .font(.system(size: 90))
                     Text(computerMove)
                         .font(.title3)
+                    Text("Computer wins: \(computerWins)")
+                        .font(.system(size: 10))
                 }
                 .frame(maxWidth: .infinity)
             }
