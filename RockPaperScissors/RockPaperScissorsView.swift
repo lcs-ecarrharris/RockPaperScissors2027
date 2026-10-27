@@ -42,6 +42,7 @@ struct RockPaperScissorsView: View {
     // Who/How many wins
     @State var playerWins: Int = 0
     @State var computerWins: Int = 0
+    @State var ties: Int = 0
     // MARK: - Computed properties
 
     var body: some View {
@@ -72,9 +73,21 @@ struct RockPaperScissorsView: View {
                 }
                 .frame(maxWidth: .infinity)
 
-                Text("vs")
-                    .font(.title)
-                    .foregroundStyle(Color.secondary)
+                
+                VStack {
+                    Spacer()
+                    
+                    Text("vs")
+                        .font(.title)
+                        .foregroundStyle(Color.secondary)
+                    
+                    Spacer()
+
+                    Text("Ties: \(ties)")
+                        .font(.system(size: 10))
+                        .padding(.bottom, 6)
+                }
+               
 
                 VStack(spacing: 8) {
                     Label("Computer", systemImage: "desktopcomputer")
@@ -203,6 +216,7 @@ struct RockPaperScissorsView: View {
         if playerMove == computerMove {
             // TRY: Change what the game says when there is a tie.
             result = "It's a tie!"
+            ties += 1
         }else if playerMove == "Scissors" && computerMove == "Paper" {
             
             result = "You won"
