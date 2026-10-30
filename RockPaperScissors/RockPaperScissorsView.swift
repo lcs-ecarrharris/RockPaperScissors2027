@@ -222,13 +222,7 @@ struct RockPaperScissorsView: View {
             // TRY: Change what the game says when there is a tie.
             result = "It's a tie!"
             ties += 1
-        } else if playerMove == "Scissors" && computerMove == "Paper" {
-            result = "You won"
-            playerWins += 1
-        } else if playerMove == "Rock" && computerMove == "Scissors" {
-            result = "You won"
-            playerWins += 1
-        } else if playerMove == "Paper" && computerMove == "Rock" {
+        } else if playerMove == "Scissors" && computerMove == "Paper" || playerMove == "Rock" && computerMove == "Scissors" || playerMove == "Paper" && computerMove == "Rock" {
             result = "You won"
             playerWins += 1
         } else {
