@@ -198,6 +198,7 @@ struct RockPaperScissorsView: View {
     func chooseComputerMove() {
         
         // Pick 1, 2 or 3. Each number stands for one move.
+        // Change 202 for testing, replace "Int.random(in: 1...3)" with 1, 2, or 3 to get a set move
         let randomNumber: Int = Int.random(in: 1...3)
         
         if randomNumber == 1 {

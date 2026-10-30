@@ -14,16 +14,10 @@ The first run takes a minute while Xcode builds the app. After that, the game op
 
 To read the code, click **RockPaperScissorsView.swift** in the list of files on the left. Most of the game lives in that one file.
 
-## Three things to try
 
-Look for comments that start with `// TRY:`. They mark safe places to experiment. Here are three to start with.
-
-1. **Give the game a new theme.** Near the top of the file, change the three emoji. Maybe it's 🐘 🐭 🐱, or 🔥 💧 🌱. To type an emoji on a Mac, press **Control-Command-Space**.
-2. **Change the colour.** The game uses `Color.teal` in three places. Change all three to another colour, such as `Color.purple`.
-3. **Change what a tie says.** Find `"It's a tie!"` and write your own message.
-
-If something stops working, don't panic. Press **Command-Z** to undo, or ask a classmate or me. Every programmer breaks things. It's how we learn.
-
+## Testing
+Play any amount of rounds, then add up the ties, playerWins, and computerWins. They should add up to number of rounds played. 
+See line 201 and change 202 to test the result of set moves
 ## Credits
 
 I wrote this starter game for my ICS3U course at Lakefield College School.
